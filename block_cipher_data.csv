@@ -1,0 +1,40 @@
+Block_Cipher,Structure,Standard,Block_Length,CPU_Clock_Freq,Throughput,Total_Clock_Cycles,Util_Memory,Security_Level,Known_Vulnerabilities
+3DES,Feistel,No,64,-,1.76,3600,20.7,Medium,Vulnerable to meet-in-the-middle attacks and block collision attacks; exploited by the Sweet32 attack (CVE-2016-2183).
+3-Way,SPN,No,96,66,2,-,-,Medium,Vulnerable to related-key cryptanalysis; can be broken with one related key query and about 2^22 chosen plaintexts.
+μ²,Feistel,No,64,3500,148.28,-,-,-,-
+AES-128,SPN,Yes,128,206,72.84,362,20,High,Related-key attacks and known-key attacks (only against improperly configured systems or reduced-round versions).
+Akelarre,Lai-Massey,No,128,130,3.22,-,-,Low,"Susceptible to ciphertext-only attacks; weak round function preserves input parity, insecure against chosen plaintext attacks."
+Anubis,SPN,No,128,1333,1160.71,147,-,High,-
+ARIA,SPN,No,128,14.74,0.28,6624,-,High,Susceptible to impossible differential cryptanalysis and meet-in-the-middle attacks on reduced rounds.
+BaseKing,SPN,No,128,-,-,1949,1.7,Medium,Vulnerable to related-key attack and power analysis.
+Blowfish,Feistel,No,64,-,4.28,-,9.38,High,Vulnerable to Sweet32 birthday attacks; reduced-round variants susceptible to known-plaintext attacks on weak keys.
+Camellia,Feistel,Yes,128,667,251.85,339,3.07,High,Vulnerable to cache timing attacks.
+CAST-128,Feistel,No,64,16,0.036,16000,-,Medium,"Susceptible to differential cryptanalysis, linear cryptanalysis, and weaknesses related to the nonsurjectivity of the f-function."
+CAST-256,Feistel,No,128,200,37.8,-,-,High,"Minor weaknesses such as non-surjective attacks and HOD attacks, but nothing extendable beyond 5-6 rounds."
+CLEFIA,Feistel,No,128,2400,1480,206,8,High,"Susceptible to impossible differential attacks, particularly on reduced rounds."
+CS-Cipher,Feistel,No,64,133,8.34,973,-,-,-
+CRYPTON,SPN,No,128,200,6.4,390,-,Medium,Susceptible to partitioning cryptanalysis and weaknesses in key schedule.
+DES,Feistel,No,64,100,0.052,124000,0.5,Low,"Susceptible to brute-force attacks, differential cryptanalysis, and linear cryptanalysis."
+Hierocrypt,Nested SPN,No,128,599,48,-,-,High,Weaknesses in the key schedule; integral attacks against reduced-round variants (3.5 rounds).
+ICE,Feistel,No,64,100,52.03,123,-,High,Differential cryptanalysis can break 15 out of 16 rounds with complexity 2^56.
+IDEA,Lai-Massey,No,64,667,22.61,1888,-,High,Susceptible to implementation issues such as side-channel attacks; weak keys in earlier versions.
+KHAZAD,SPN,No,64,550,86,409,-,Low,Susceptible to attacks on 5 out of 8 rounds; best known attack breaks 5 rounds faster than exhaustive key search.
+KLEIN-64/80/96,SPN,No,64,1,0.03,1970,3.2,Medium,Susceptible to chosen-plaintext key-recovery attacks (up to 8 rounds of KLEIN-64) and potential related-key weaknesses.
+LBlock,Feistel,No,64,-,-,3955,-,Medium,"Susceptible to differential cryptanalysis, linear cryptanalysis, impossible differential cryptanalysis, and related-key attacks."
+LED-64/128,SPN,No,"64,128",1600,224.56/148.84,456/688,-,High,Susceptible to differential and linear cryptanalysis.
+LOKI97,Feistel,No,128,233,1,-,-,Medium,Susceptible to linear cryptanalysis requiring 2^56 known plaintexts.
+MAGENTA,Feistel,No,128,200,1.08,23694,-,Low,Susceptible to various cryptanalysis methods; weaknesses discovered during AES evaluation.
+MARS,Type-3 Feistel,No,128,200,85,300,2.16,High,-
+Mercy,Feistel,No,4096,233,207.11,4608,1.5,Low,"Susceptible to differential attacks, specifically Scott Fluhrer's differential attack breaks the cipher."
+MESH-64/96/128,Lai-Massey,No,"64,96,128",667,20.7/16.5/15.4,2054/3869/5536,-,High,-
+NOEKEON,ARX,No,128,28.56,7.7,475,3.68,High,Vulnerable to certain peculiar kinds of related-key cryptanalysis.
+RECTANGLE,SPN,No,64,2500,655.74,244,3,Medium,Can be attacked with a shortcut attack on 18 rounds out of 25 rounds.
+RC5,Feistel-like,No,64,50,1.2,-,-,High,Susceptible to differential and linear cryptanalysis; vulnerable to brute-force attacks if key size is insufficient.
+RC6,Feistel,No,128,254,12.6,148,-,High,Susceptible to certain cryptanalytic attacks.
+SC2000 (128-bit),SPN and Feistel,No,128,500,268.91,238,1.6,High,Potentially vulnerable to physical attacks
+Serpent,SPN,No,128,133,0.0089,-,-,High,Susceptible to attacks on reduced rounds (11 or 12 rounds) with significant known plaintexts; full 32-round version remains secure against known attacks.
+SHARK,SPN,No,64,266,6.3,-,-,Medium,Susceptible to interpolation attacks.
+SIMON,SPN and Feistel,Yes,64,14.74,17.71,10656,0.19,High,Susceptible to differential cryptanalysis; not designed to resist known-key distinguishing attacks.
+SPECK,SPN and Feistel,Yes,64,14.74,28.08,6720,0.16,Medium,Susceptible to differential cryptanalysis and machine learning-based attacks.
+Square,SPN,No,128,100,2.63,-,-,Medium,Vulnerable to Square attack
+TWINE,Feistel,No,64,1,0.03,2168,1.72,Medium,Susceptible to slide attacks and biclique cryptanalysis due to low diffusion properties.

@@ -8,8 +8,8 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 from imblearn.over_sampling import SMOTE
 
 # Load and preprocess data
-desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
-file_path = os.path.join(desktop_path, "block_cipher_data.csv")
+project_dir = os.getcwd()
+file_path = os.path.join(project_dir, "block_cipher_data.csv")
 data = pd.read_csv(file_path, header=None)
 data.columns = ['Block_Cipher', 'Structure', 'Standard', 'Block_Length', 'CPU_Clock_Freq', 'Throughput',
                 'Total_Clock_Cycles', 'Util_Memory', 'Security_Level', 'Known_Vulnerabilities']
